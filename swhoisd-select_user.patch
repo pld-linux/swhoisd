@@ -1,0 +1,54 @@
+--- ./configure.in.org	Sun Jan  4 06:30:08 2004
++++ ./configure.in	Wed Aug 18 15:02:36 2004
+@@ -241,6 +241,26 @@
+ esac
+ 
+ 
++############################
++### Config default user:
++###
++dnl What is the default user
++AC_ARG_WITH(user,
++	    AC_HELP_STRING([--with-user=USER],[Set default user (default: nobody)]),
++	    WHOIS_DEFAULT_USER="$with_user", WHOIS_DEFAULT_USER="nobody")
++AC_SUBST(DEFAULT_USER, $WHOIS_DEFAULT_USER)
++AC_DEFINE_UNQUOTED(DEFAULT_USER, "$WHOIS_DEFAULT_USER")
++
++############################
++### Config default group:
++###
++dnl What is the default dcd group
++AC_ARG_WITH(group,
++	    AC_HELP_STRING([--with-group=GROUP],[Set default group (default: nogroup)]),
++	    WHOIS_DEFAULT_GROUP="$with_group", WHOIS_DEFAULT_GROUP="nogroup")
++AC_SUBST(DEFAULT_GROUP, $WHOIS_DEFAULT_GROUP)
++AC_DEFINE_UNQUOTED(DEFAULT_GROUP, "$WHOIS_DEFAULT_GROUP")
++
+ dnl
+ dnl Determine the values for nobody uid and nobody gid.
+ dnl
+@@ -254,9 +274,9 @@
+ 	id=`grep "^$1" "$2" | sort -t':' -k 3 | tail -1 | cut -d':' -f3`
+ }
+ 
+-AC_MSG_CHECKING([for nobody uid])
++AC_MSG_CHECKING([for $WHOIS_DEFAULT_USER uid])
+ dnl UID: Get the "nobody" (or if none, SCO's "nouser") UID.
+-getid nobody /etc/passwd
++getid $WHOIS_DEFAULT_USER /etc/passwd
+ if test $id -ne -1 ; then
+ 	default_nobody=$id
+ else
+@@ -267,10 +287,10 @@
+ fi
+ AC_MSG_RESULT($default_nobody)
+ 
+-AC_MSG_CHECKING([for nogroup gid])
++AC_MSG_CHECKING([for $WHOIS_DEFAULT_GROUP gid])
+ dnl GID: nogroup (or nobody, if no "nogroup")
+ dnl GID: On some systems, setgid() fails if GID > 60000.
+-getid nogroup /etc/group
++getid $WHOIS_DEFAULT_GROUP /etc/group
+ if test $id -ne -1 ; then
+ 	default_nogroup=$id
+ else
