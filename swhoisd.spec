@@ -12,7 +12,7 @@ URL:		http://dan.drydog.com/swhoisd/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 swhoisd is a simple whois daemon that provides a whois directory
