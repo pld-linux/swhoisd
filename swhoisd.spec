@@ -1,5 +1,5 @@
 Summary:	Simple WHOIS Daemon for the whois directory service
-Summary(pl):	Prosty demon WHOIS dla us≥ugi katalogowej whois
+Summary(pl.UTF-8):   Prosty demon WHOIS dla us≈Çugi katalogowej whois
 Name:		swhoisd
 Version:	3.0.5
 Release:	1
@@ -25,15 +25,15 @@ whois server is recommended only for small databases (preferably under
 This daemon conforms to RFC 834 and uses TCP port 43 (service
 "whois").
 
-%description -l pl
-swhoisd to prosty demon whois dostarczaj±cy us≥ugÍ katalogow± whois.
-Jest duøo prostszy do skonfigurowania niø inne dostÍpne demony whois,
-jak na przyk≥ad RIPE whois czy oryginalny SRC whois. Jest tak poniewaø
-swhoisd uøywa p≥askiego pliku tekstowego zamiast z≥oøonej bazy danych.
-Ten serwer whois jest zalecany tylko dla ma≥ych baz (najlepiej poniøej
-200 rekordÛw, zdecydowanie nie wiÍcej niø 1000).
+%description -l pl.UTF-8
+swhoisd to prosty demon whois dostarczajƒÖcy us≈Çugƒô katalogowƒÖ whois.
+Jest du≈ºo prostszy do skonfigurowania ni≈º inne dostƒôpne demony whois,
+jak na przyk≈Çad RIPE whois czy oryginalny SRC whois. Jest tak poniewa≈º
+swhoisd u≈ºywa p≈Çaskiego pliku tekstowego zamiast z≈Ço≈ºonej bazy danych.
+Ten serwer whois jest zalecany tylko dla ma≈Çych baz (najlepiej poni≈ºej
+200 rekord√≥w, zdecydowanie nie wiƒôcej ni≈º 1000).
 
-Ten demon jest zgodny z RFC 834 i uøywa portu 43 TCP (us≥ugi "whois").
+Ten demon jest zgodny z RFC 834 i u≈ºywa portu 43 TCP (us≈Çugi "whois").
 
 %prep
 %setup -q
