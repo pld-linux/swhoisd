@@ -1,5 +1,5 @@
 Summary:	Simple WHOIS Daemon for the whois directory service
-Summary(pl.UTF-8):   Prosty demon WHOIS dla usługi katalogowej whois
+Summary(pl.UTF-8):	Prosty demon WHOIS dla usługi katalogowej whois
 Name:		swhoisd
 Version:	3.0.5
 Release:	1
