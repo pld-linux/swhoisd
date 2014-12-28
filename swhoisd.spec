@@ -11,7 +11,7 @@ Patch0:		%{name}-select_user.patch
 URL:		http://dan.drydog.com/swhoisd/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
