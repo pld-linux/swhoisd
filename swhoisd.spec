@@ -38,7 +38,7 @@ Ten demon jest zgodny z RFC 834 i używa portu 43 TCP (usługi "whois").
 %prep
 %setup -q
 chmod -R u+rw *
-%patch0 -p1 
+%patch -P0 -p1 
 
 %build
 %{__gettextize}
